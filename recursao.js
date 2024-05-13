@@ -1,23 +1,22 @@
 // Soma dos números inteiros de 1 a n
 function somaNumeros(n) {
-  soma = 0;
-  for(i = 0; i <= n;i++){
-    soma += i
+  if (n ==1){
+    return 1
+  } else{
+    return n + somaNumeros(n-1)
   }
-    return soma; 
-
 }
 
 // Verifica se um número é par
 function ehPar(number) {
-  if(number %2 ===0){
-    number = true;
-  } else {
-    number = false;
+  if(number ===0){
+    return true;
   }
-  return number;
+  if(number === 1){
+    return false;
+  }
+  return ehPar(number-2)
 }
-
 function fibonacci(n) {
   if (n <2){
     return n
